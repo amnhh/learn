@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+</head>
+<body>
+<a>
+  <!-- a 里不许套 div -->
+  <div></div>
+  <span></span>
+  <!-- 不许套用 p 标签 -->
+  <p></p>
+  <!-- img 标签，必须拥有 src 和 alt 属性 -->
+  <img src="" alt=""/>
+</a>
+
+<span>
+  <!-- span 里面不许嵌套 p -->
+  <p></p>
+  <!-- 可以嵌套 img -->
+  <img src="" alt=""/>
+  <!-- li 必需和 ul/ol 一起出现 -->
+  <li></li>
+  <!-- 不许包含 pre -->
+  <pre></pre>
+  <!-- 可以包含 a -->
+  <a href=""></a>
+</span>
+
+<!-- 不允许大写字母 -->
+<A></A>
+
+<!-- 必需正确的闭合 -->
+<img src="" alt="">
+
+<ul>
+  <!-- 不允许直接在 ul 中嵌套 div, ul 的下一级一定为 li -->
+  <div></div>
+  <li>
+    <!-- li 里允许嵌套 div -->
+    <div></div>
+  </li>
+</ul>
+</body>
+</html>
