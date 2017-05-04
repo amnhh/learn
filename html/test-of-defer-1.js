@@ -3,5 +3,5 @@
  * Email : amnhhlod@gmail.com
  * Date : 2017/5/4
  */
-
-console.log(1)
+debugger;
+console.log('我是 defer 的 script 标签')
