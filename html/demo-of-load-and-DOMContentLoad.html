@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="./test-of-defer-1.js" defer></script>
+  <script>
+    window.addEventListener('load', function () {
+      console.log('触发了 load 事件' + Date.now());
+    });
+    window.addEventListener('DOMContentLoaded', function () {
+      console.log('触发了 DOMContentLoaded 事件' + Date.now());
+    })
+  </script>
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css">
+</head>
+<body>
+
+</body>
+</html>
