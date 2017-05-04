@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<ul id="example">
+  <li>0</li>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li id="five">5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+</ul>
+<script>
+  var oul = document.querySelector('#example'),
+    oli = document.querySelectorAll('li'),
+    _slice = Array.prototype.slice,
+    oliList = _slice.call(oli, 0);
+
+  oul.onclick = function () {
+    var e = arguments[0] || window.event,
+      target = e.target || e.srcElement;
+    if (target.nodeName.toLowerCase() === 'li') {
+      // 简单输出 innerHTML
+      console.log(target.innerHTML);
+
+      // 输出对应的索引
+      console.log('我是第' + oliList.indexOf(target) + '个');
+    }
+  };
+
+  var i,
+    count = 1e6,
+    targetNumber = 1e6 - 1,
+    targetList = [],
+    targetIndex;
+
+  // 先给一个数组赋值
+  for (i = 0; i < count; i ++) {
+    targetList[i] = i;
+  }
+
+  // 检验 indexOf 和 for 循环的性能
+  var time1 = Date.now();
+
+  // for 循环 4ms
+//  for (i = 0; i < count; i ++) {
+//    if (targetList[i] === targetNumber) {
+//      targetIndex = i;
+//    }
+//  }
+
+  // indexOf 2ms。。还是indexOf 好一些吼
+  targetIndex = targetList.indexOf(targetNumber);
+  var time2 = Date.now();
+  console.log(time2 - time1);
+</script>
+</body>
+</html>
