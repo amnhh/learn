@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div
+    id="example"
+    data-id="123"
+    data-value="again"
+>
+  amnhh
+</div>
+
+<script>
+  var odiv = document.getElementById('example');
+  var num = 1e6;
+
+  // dataset 是一种 DOMStringMap,存取速度有待考量
+  console.log(odiv.dataset);
+
+//   速度测试，对比对象为 getAttribute/setAttribute
+//  var time1 = Date.now();
+//  for (var i = 0; i < num; i ++) {
+//    if (odiv.dataset.id == '1') {
+//      odiv.dataset.id == '123';
+//    } else {
+//      odiv.dataset.id = '1';
+//    }
+//  }
+//  var time2 = Date.now();
+//  console.log(time2 - time1); // 271 => 如果在 for 循环里先把 odiv.dataset.id 的引用取出来，结果会变成 120ms... 性能啊性能卧槽。。
+
+  var time1 = Date.now();
+  for (var i = 0; i < num; i ++) {
+    if (odiv.getAttribute('data-id') == '1') {
+      odiv.setAttribute('data-id', '123');
+    } else {
+      odiv.setAttribute('data-id', '1');
+    }
+  }
+  var time2 = Date.now();
+  console.log(time2 - time1); // 357 ms ..dataset 比这东西快多了。。而且还可以提取引用来进行优化
+</script>
+</body>
+</html>
