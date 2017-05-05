@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Animal () {}
+
+  Animal.prototype.species = '动物';
+
+  function Cat (name, color) {
+    this.name = name;
+    this.color = color;
+  }
+
+  Cat.prototype = Animal.prototype;
+
+  // 有一个问题就是, 特么的如果说改了 Cat.prototype 上的东西，在 Animal.prototype 上也会体现出来
+  var cat = new Cat('anning', 'red');
+  console.log(cat);
+</script>
+</body>
+</html>
