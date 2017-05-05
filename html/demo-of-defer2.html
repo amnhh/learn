@@ -5,10 +5,11 @@
   <title>Title</title>
 </head>
 <body>
-
 <div id="example"></div>
-<script src="react.js" async></script>
-<script src="test-of-defer-1.js" async></script>
+<script src="test-of-defer-1.js" defer></script>
+
+
+
 <script>
   var _example = document.getElementById('example'),
     i,
@@ -17,7 +18,7 @@
   for (i = 0; i < count; i ++) {
     _example.innerHTML = i;
   }
-  console.log(2);
+  debugger
 </script>
 </body>
 </html>

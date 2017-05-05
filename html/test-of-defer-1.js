@@ -4,4 +4,8 @@
  * Date : 2017/5/4
  */
 debugger;
-console.log('我是 defer 的 script 标签')
+console.log(React);
+
+// setTimeout(function () {
+//   console.log(React);
+// }, 2000);
