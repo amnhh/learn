@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function extend (son, parent) {
+    // 先创建一个空的函数
+    var F = function () {};
+    // 原型指向 parent 的原型
+    F.prototype = parent.prototype;
+
+    // son 的原型指向 F 的实例，所以 son 可以继承 F 上的东西， 而 F 又可以继承 parent 的东西，所以 1 -> 2 -> 3 => 1 -> 3
+    son.prototype = new F();
+
+    // 防止 constructor 紊乱
+    son.prototype.constructor = son;
+
+    // uber 里存储着 parent 里面的引用，附加属性
+    son.uber = parent.prototype;
+  }
+
+  function Animal () {}
+  Animal.prototype.species = '动物';
+
+  function Cat (name, color) {
+    this.name = name;
+    this.color = color;
+  }
+
+  extend(Cat, Animal);
+
+  var cat = new Cat('anning', 'red');
+  console.log(cat);
+
+
+</script>
+</body>
+</html>
