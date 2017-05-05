@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<ul id="myUl">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li id="five">5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+</ul>
+<script>
+   var _ul = document.getElementById('myUl');
+
+   _ul.addEventListener('click', function (e) {
+     var target = e.target || e.srcElement;
+
+     if (target.nodeName.toLowerCase() === 'li') {
+       console.log(target.innerHTML);
+     }
+   });
+</script>
+</body>
+</html>
