@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  /**
+   * Animal
+   * @constructor
+   */
+  function Animal () {
+    this.species = 'animal';
+  }
+
+  /**
+   * Cat
+   * @constructor
+   */
+  function Cat (name, color) {
+    Animal.apply(this, arguments);
+    this.name = name;
+    this.color = color;
+  }
+
+  var cat = new Cat('anning', 'red')
+  console.log(cat);
+
+</script>
+</body>
+</html>
