@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  class Animal {
+    constructor () {
+      this.name = 1;
+    }
+  }
+
+  function Cat (name, color) {
+    this.name = name;
+    this.color = color;
+  }
+
+  // 实际上使用 class 的话，是比普通的 function 定义多了一个层级
+  Cat.prototype = new Animal();
+
+  var cat = new Cat('anning', 'red');
+  console.log(cat);
+  console.log(cat.constructor);
+</script>
+</body>
+</html>
