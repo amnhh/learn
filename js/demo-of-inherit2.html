@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Animal () {
+    this.species = '动物';
+  }
+
+  function Cat (name, color) {
+    this.name = name;
+    this.color = color;
+  }
+
+  // 这里是覆盖了 prototype， 所以 constructor 也会被置换成 Animal
+  Cat.prototype = new Animal();
+  // 而我们想要的是让实例的 constructor 还是 Cat, 所以这里手动指定一下
+  Cat.prototype.constructor = Cat;
+
+  var cat = new Cat('anning', 'red');
+  console.log(cat);
+  console.log(cat.constructor);
+</script>
+</body>
+</html>
