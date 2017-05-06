@@ -4,7 +4,7 @@
  * Date : 2017/5/4
  */
 debugger;
-console.log(React);
+// console.log(React);
 
 // setTimeout(function () {
 //   console.log(React);

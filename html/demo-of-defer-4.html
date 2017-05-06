@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var doc = document, 
+  _script = doc.createElement('script');
+  _script.src = 'test-of-defer-1.js';
+
+  _script.setAttribute('defer', true);
+
+  debugger;
+  doc.head.appendChild(_script);
+</script>
+
+
+
+<script>
+  debugger
+</script>
+</body>
+</html>
