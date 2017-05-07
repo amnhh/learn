@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset=utf-8>
+  <style>
+    span {
+      /* height 失效, 并没有 100px */
+      height: 100px;
+
+      /* padding-top/bottom 也失效... 并没有起作用.. 也没有改变行框的高度 */
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+      /* 这个虽然没有改变 span 元素本来的高度, 但是改变了包裹它的行框的高度，暂且算是达到了目的... */
+      line-height: 100px;
+    }
+
+    div {
+      /* 这个可行... 但是和我的初衷有点出入......这特么是改的盒子的高度啊... */
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+<!-- <div> -->
+  <span>Amnhh, Amnhh, Amnhh, Amnhh, Amnhh, Amnhh, Amnhh, Amnhh</span> 
+<!-- </div> -->
+</body>
+</html>
