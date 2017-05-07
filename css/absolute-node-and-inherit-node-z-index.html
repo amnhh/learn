@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    #div1 {
+      position: absolute;
+
+      width: 100px;
+      height: 100px;
+
+      background: green;
+    }
+
+    #div2 {
+      /* 如果不设置这个 position->relative, 就算是设置 z-index 10000 都还是 absolute 的会覆盖在上层 */
+      /* 因为如果不设置 position 的话, 始终都在文档流以内, 而 relative 或者 absolute 其实都脱离了文档流 */
+      /* 其实 position: relative; 我认为在展示方面已经脱离了文档流， 但是因为他的占位永远都是文档流的位置*/
+      /* 所以。。。很多人都说不脱离文档流 */
+      /*position: relative;*/
+
+      width: 100px;
+      height: 100px;
+
+      background: red;
+    }
+  </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>
