@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #div1 {
+      position: relative;
+
+      width: 100px;
+      height: 100px;
+
+      /* 还是占据着自身原来的位置，只是进行了位移，会覆盖掉其他的元素 */
+      top: 20px;
+      left: 20px;
+
+      background: green;
+    }
+
+    #div2 {
+      /* 这时候设置了 z-index 10000 都还是会被上面的盖住, 因为他是 relative 布局 */
+      /* 如果想要不被 div1 盖着的话, 就自身也变成 relative 元素 */
+      position: relative;
+      z-index: 1000;
+
+      width: 100px;
+      height: 100px;
+
+      background: red;
+    }
+  </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>
