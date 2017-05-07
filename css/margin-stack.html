@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    #div1 {
+      width: 100px;
+      height: 100px;
+
+      margin-bottom: 200px;
+
+      background: yellow;
+    }
+
+    #div2 {
+      width: 100px;
+      height : 100px;
+
+      margin-top: 100px;
+
+      background: green;
+    }
+  </style>
+</head>
+<body>
+<div id="div1"></div>
+<!-- 两个 margin 层叠在了一起，相当于两者相遇不是最终生成 300px, 而是只有 200px -->
+<div id="div2"></div>
+</body>
+</html>
