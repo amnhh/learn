@@ -3,9 +3,11 @@
  * Email : amnhhlod@gmail.com
  * Date : 2017/5/4
  */
-debugger;
+// debugger;
 // console.log(React);
 
 // setTimeout(function () {
 //   console.log(React);
 // }, 2000);
+// 
+console.log(React);

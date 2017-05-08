@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script>
+
+    // 绑定 `load` 事件
+    window.addEventListener('load', function () {
+      console.log('loaded');
+    });
+
+    // 绑定 `DOMContentLoaded` 事件
+    window.addEventListener('DOMContentLoaded', function () {
+      console.log('DOMContentLoaded');
+    });
+  </script>
+  <!-- 加载 defered scripts -->
+  <script src="test-of-defer-1.js" defer></script>
+</head>
+<body>
+<script>
+  // 正常解析的 loading
+  console.log('loading');
+</script>
+</body>
+</html>
