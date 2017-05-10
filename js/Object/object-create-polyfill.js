@@ -16,10 +16,11 @@ function _create (proto) {
     return nativeCreate(proto);
   }
 
-  // Get a constructor.
+  // Declare a constructor.
   function F () {}
   // Prototype bind.
   F.prototype = proto;
 
+  // return an new F
   return new F();
 };
