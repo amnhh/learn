@@ -27,7 +27,7 @@ var walkTheDOM = function walk (node, func) {
 var _walkTheDOM = function walk (node, func) {
   // 不是 node 的时候抛错
   // 只在第一次进入的时候检查, 否则不检查 => 也可以手动指定不检查
-  if ( typeof node.nodeType === 'undefined') {
+  if (typeof node.nodeType === 'undefined') {
     throw new TypeError('Need an node');
   }
 
