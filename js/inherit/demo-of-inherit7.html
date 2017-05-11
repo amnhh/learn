@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script>
+  var person = {
+    name : 'anning',
+    friends : ['huhuimin']
+  };
+
+  var otherPerson = Object.create(person, {
+    name : {
+      configurable : false,
+      value : 'again'
+    },
+    // 这种方式定义的, 如果不显式的声明其 configurable 为 true 的话, 会直接被指定为 false
+    age : {
+      value : 12,
+      configurable : true
+    }
+  });
+
+  console.log(otherPerson);
+  console.log(Object.getOwnPropertyDescriptor(otherPerson, 'age')); // 不加 configurable : true 的话, 默认是 false 的
+</script>
+</body>
+</html>
