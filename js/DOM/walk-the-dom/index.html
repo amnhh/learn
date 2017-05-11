@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="outer-div">
+  <p id="inner-p"><span id="inner-span">again</span></p>
+  <div id="inner-div">
+    <a href="" id="inner-div-a"></a>
+  </div>
+</div>
+<script src="./walk-the-dom.js"></script>
+<script>
+  var ndOuterDiv = document.getElementById('outer-div');
+
+  _walkTheDOM(ndOuterDiv, function () {
+    console.log(this.id);
+  });
+</script>
+</body>
+</html>
