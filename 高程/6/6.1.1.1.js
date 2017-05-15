@@ -6,6 +6,7 @@
 var person = {};
 
 Object.defineProperty(person, 'again', {
+  // Readonly property.
   writable : false,
   value : 'Amnhh'
 });
