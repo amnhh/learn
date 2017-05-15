@@ -15,3 +15,6 @@ console.log(a instanceof Object);
 console.log(b instanceof Object);
 // true
 console.log(b instanceof Function);
+
+// false => 因为基本类型的值都不是对象
+console.log('1123' instanceof String);
