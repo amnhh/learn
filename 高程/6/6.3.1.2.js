@@ -37,4 +37,4 @@ console.log(engineer_new.parent); // ['a', 'b']
 engineer.parent.push('c');
 
 console.log(engineer.parent); // ['a', 'b', 'c'] => 独立于 engineer_new
-console.log(engineer_new.parent);
+console.log(engineer_new.parent); // ['a', 'b']
