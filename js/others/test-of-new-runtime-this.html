@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Amnhh () {
+    console.log(this instanceof Amnhh);
+  }
+
+  Amnhh(); // false
+  // true =>
+  //    - 在 new 的过程中，先创建一个对象，
+  //    - 再完成 [prototype] 的绑定，
+  //    - 然后再执行构造函数里的东西，
+  //    - 所以在执行到构造函数里的时候, this 一定指向新创建的对象，并且是构造函数的实例
+  new Amnhh();
+</script>
+</body>
+</html>
