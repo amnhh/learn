@@ -39,5 +39,3 @@ var person3 = new Person(10);
 console.log(person1.getName()); // 10
 console.log(person2.getName()); // 10
 console.log(person3.getName()); // 10
-
-
