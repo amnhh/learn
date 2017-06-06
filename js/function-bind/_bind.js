@@ -1,6 +1,8 @@
 /**
  * Created by anning on 2017/6/5.
  */
+
+ // Declare on Function.prototype.
 Function.prototype.bind = function _bind (context) {
   if (Object.prototype.toString.call(context) !== '[object Object]') {
     throw new TypeError('First arg needs input an Object');
@@ -14,6 +16,8 @@ Function.prototype.bind = function _bind (context) {
   };
 }
 
+
+// test.
 function again () {
   console.log(this === amnhh);
 }
