@@ -7,6 +7,7 @@ var booker = {
   _year : 20
 };
 
+
 Object.defineProperty(booker, 'again', {
   get : function () {
     console.log('I\'m in getter.');
