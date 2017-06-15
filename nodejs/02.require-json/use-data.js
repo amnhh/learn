@@ -5,6 +5,9 @@
  * Description : 使用 json
  */
 
+// We always use that to get some config of this node project.
+//   require('./package.json')
+
 // import data.json
 // Here we add `.json` to make node's search more faster
 // Because node will add `.js`, `.node` and `.json` to match the file package you required
