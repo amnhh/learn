@@ -11,4 +11,4 @@ var myObject = {
   [amnhh + 'world'] : 'world'
 };
 
-console.log(myObject.testhello);
+console.log( myObject.testhello );
